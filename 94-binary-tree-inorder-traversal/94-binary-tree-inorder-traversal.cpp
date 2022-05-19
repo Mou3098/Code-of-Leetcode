@@ -27,7 +27,7 @@ public:
         {
             inorder(root->left,res);
         }
-        res.emplace_back(root->val);
+        res.push_back(root->val);
         if(root->right)
         {
             inorder(root->right,res);
