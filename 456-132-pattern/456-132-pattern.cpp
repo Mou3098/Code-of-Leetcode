@@ -2,7 +2,7 @@ class Solution {
 public:
     bool find132pattern(vector<int>& nums) {
         int n = nums.size();
-      if(!n) return false;
+      if(n<3) return false;
       vector <int> minVals(n);
       minVals[0] = nums[0];
       for(int i = 1; i < n; i++){
