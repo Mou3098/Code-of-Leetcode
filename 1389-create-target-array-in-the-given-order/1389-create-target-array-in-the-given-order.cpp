@@ -5,9 +5,8 @@ public:
         vector<int> v;
         for(int i=0;i<n;i++)
         {
-           
-                 v.insert(v.begin() + index[i], nums[i]);
-            
+                auto itPos = v.begin() + index[i];
+               v.insert(itPos, nums[i]);
         }
         return v;
     }
