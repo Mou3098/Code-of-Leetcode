@@ -5,14 +5,7 @@ public:
         int l=0;
         while(n>1)
         {
-            if(l)
-            {
-                ans+=(n/2);
-            }
-            else
-            {
-                ans+=n/2;
-            }
+            ans+=n/2;
             if(n%2)
             {
                 l=1;
