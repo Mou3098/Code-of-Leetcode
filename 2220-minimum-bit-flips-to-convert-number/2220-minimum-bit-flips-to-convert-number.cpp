@@ -8,8 +8,8 @@ public:
             int q=goal%2;
             if(p^q)
             {ans++;}
-            start>>=1;
-            goal>>=1;
+            start/=2;
+            goal/=2;
         }
         return ans;
     }
