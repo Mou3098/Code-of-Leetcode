@@ -6,9 +6,9 @@ public:
         while(n)
         {
             int l=n%2;
-            if(l==1)
+            if((temp&n)>0)
             {ans++;}
-            n=n/2;
+            n>>=1;
         }
         
         return ans;
