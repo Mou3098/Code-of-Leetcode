@@ -6,7 +6,7 @@ public:
         {
             int p=start%2;
             int q=goal%2;
-            if(p^q)
+            if(p!=q)
             {ans++;}
             start/=2;
             goal/=2;
