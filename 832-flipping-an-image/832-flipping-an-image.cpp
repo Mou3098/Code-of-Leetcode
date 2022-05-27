@@ -12,9 +12,6 @@ public:
                 image[i][j]=image[i][n-j-1];
                 image[i][n-j-1]=temp;
             }
-        }
-        for(int i=0;i<n;i++)
-        {
             for(int j=0;j<m;j++)
             {
                 if(image[i][j]==0)
@@ -27,6 +24,7 @@ public:
                 }
             }
         }
+        
         return image;
     }
 };
