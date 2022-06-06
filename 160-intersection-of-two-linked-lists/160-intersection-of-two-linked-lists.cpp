@@ -12,7 +12,8 @@ public:
         ListNode *a=headA, *b=headB;
         while(a!=b)
         {
-            a=!a ? headB : a->next;
+            a=(!a) ? headB : a->next;
+            //variable = (condition) ? expressionTrue : expressionFalse;
             b=!b ? headA : b->next;
         }
         return b;
