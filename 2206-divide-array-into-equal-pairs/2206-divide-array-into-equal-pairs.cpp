@@ -12,7 +12,7 @@ public:
             if(vec[nums[i]]%2)
             {
                ans=false;
-                break;
+                
             }
         }
         return ans;
