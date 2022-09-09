@@ -1,20 +1,18 @@
 class Solution {
 public:
-    int numberOfWeakCharacters(vector<vector<int>>& properties) {
-        int n = properties.size(), ans = 0, maxdef = 0;
-        sort(properties.begin(), properties.end(), cmp);
-        for (int i = 0; i < n; i++) {
-            if (properties[i][1] < maxdef)
-                ans++;
-            else
-                maxdef = max(maxdef, properties[i][1]);
-        }
-        return ans;      
+    static bool cmp(vector<int>&a, vector<int>&b){
+        if(a[0]==b[0]) return a[1]<b[1];
+        else return a[0]>b[0];
     }
-
-    static bool cmp(vector<int>& a, vector<int>& b) {
-        if (a[0] != b[0])
-            return a[0] >= b[0];
-        return a[1] <= b[1];
+    int numberOfWeakCharacters(vector<vector<int>>& properties) {
+        int count=0;
+        sort(properties.begin(),properties.end(),cmp);
+        int defense=properties[0][1];
+        for(int i=1;i<properties.size();i++)
+        {
+           if(properties[i][1]<defense) count++;
+           else defense=properties[i][1];
+        }
+        return count;
     }
 };
