@@ -15,8 +15,8 @@ public:
                 od.push_back(nums[i]);
             }
         }
-        int p=min(ev.size(),od.size());
-        for(int i=0;i<p;i++)
+        
+        for(int i=0;i<nums.size()/2;i++)
         {
             v.push_back(ev[i]);
             v.push_back(od[i]);
